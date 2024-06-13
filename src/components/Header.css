@@ -1,0 +1,154 @@
+/* 
+header {
+    background: #333;
+    color: white;
+    padding: 10px 20px;
+  }
+  
+  .main-nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .main-nav .logo {
+    font-size: 24px;
+    font-weight: bold;
+  }
+  
+  .main-nav .navlinks {
+    display: flex;
+    gap: 15px;
+  }
+  
+  .main-nav .navlinks li {
+    list-style: none;
+  }
+  
+  .main-nav .navlinks a {
+    color: white;
+    padding: 5px 10px;
+    transition: background 0.3s;
+  }
+  
+  .main-nav .navlinks a:hover,
+  .main-nav .navlinks a.active {
+    background: #555;
+    border-radius: 5px;
+  }
+  
+  .menu-btn {
+    display: none;
+  }
+  /* Add responsiveness for the header content area */
+/*  @media (max-width: 768px) {
+    .main-nav .navlinks {
+      display: none;
+    }
+    
+    .menu-btn {
+      display: block;
+      cursor: pointer;
+    }
+    
+    .menu-btn i {
+      font-size: 24px;
+    }
+    
+    #isChecked:checked + .menu-btn + .navlinks {
+      display: flex;
+      flex-direction: column;
+      width: 100%;
+    }
+    
+    .navlinks a {
+      padding: 10px;
+      border-top: 1px solid #444;
+    }
+  }
+  */
+
+  header {
+    background: #333;
+    color: white;
+    padding: 10px 20px;
+  }
+  
+  .main-nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .main-nav .logo {
+    font-size: 24px;
+    font-weight: bold;
+  }
+  
+  .main-nav .navlinks {
+    display: flex;
+    gap: 15px;
+  }
+  
+  .main-nav .navlinks li {
+    list-style: none;
+  }
+  
+  .main-nav .navlinks a {
+    color: white;
+    padding: 5px 10px;
+    transition: background 0.3s;
+    border-bottom: 2px solid transparent;
+  }
+  
+  .main-nav .navlinks a:hover,
+  .main-nav .navlinks .active {
+    background: #555;
+    border-bottom: 2px solid white;
+    border-radius: 5px;
+  }
+  
+  .menu-btn {
+    display: none;
+  }
+  
+  @media (max-width: 768px) {
+    .main-nav .navlinks {
+      display: none;
+    }
+    
+    .menu-btn {
+      display: block;
+      cursor: pointer;
+    }
+    
+    .menu-btn i {
+      font-size: 24px;
+    }
+    
+    #isChecked:checked + .menu-btn + .navlinks {
+      display: flex;
+      flex-direction: column;
+      width: 100%;
+    }
+    
+    .navlinks a {
+      padding: 10px;
+      border-top: 1px solid #444;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    header {
+      padding: 5px 10px;
+    }
+  
+    .menu-btn i {
+      font-size: 20px;
+    }
+  
+    .navlinks a {
+      padding: 8px;
+    }
+  }
+  

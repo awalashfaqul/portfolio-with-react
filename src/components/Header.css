@@ -1,154 +1,89 @@
-/* 
-header {
-    background: #333;
-    color: white;
-    padding: 10px 20px;
-  }
-  
-  .main-nav {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-  }
-  
-  .main-nav .logo {
-    font-size: 24px;
-    font-weight: bold;
-  }
-  
-  .main-nav .navlinks {
-    display: flex;
-    gap: 15px;
-  }
-  
-  .main-nav .navlinks li {
-    list-style: none;
-  }
-  
-  .main-nav .navlinks a {
-    color: white;
-    padding: 5px 10px;
-    transition: background 0.3s;
-  }
-  
-  .main-nav .navlinks a:hover,
-  .main-nav .navlinks a.active {
-    background: #555;
-    border-radius: 5px;
-  }
-  
-  .menu-btn {
-    display: none;
-  }
-  /* Add responsiveness for the header content area */
-/*  @media (max-width: 768px) {
-    .main-nav .navlinks {
-      display: none;
-    }
-    
-    .menu-btn {
-      display: block;
-      cursor: pointer;
-    }
-    
-    .menu-btn i {
-      font-size: 24px;
-    }
-    
-    #isChecked:checked + .menu-btn + .navlinks {
-      display: flex;
-      flex-direction: column;
-      width: 100%;
-    }
-    
-    .navlinks a {
-      padding: 10px;
-      border-top: 1px solid #444;
-    }
-  }
-  */
+/* Base styles for header */
+.header {
+  background-color: #333;
+  color: white;
+  padding: 10px 20px;
+  position: relative;
+  z-index: 1000;
+}
 
-  header {
-    background: #333;
-    color: white;
-    padding: 10px 20px;
-  }
-  
-  .main-nav {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-  }
-  
-  .main-nav .logo {
-    font-size: 24px;
-    font-weight: bold;
-  }
-  
-  .main-nav .navlinks {
-    display: flex;
-    gap: 15px;
-  }
-  
-  .main-nav .navlinks li {
-    list-style: none;
-  }
-  
-  .main-nav .navlinks a {
-    color: white;
-    padding: 5px 10px;
-    transition: background 0.3s;
-    border-bottom: 2px solid transparent;
-  }
-  
-  .main-nav .navlinks a:hover,
-  .main-nav .navlinks .active {
-    background: #555;
-    border-bottom: 2px solid white;
-    border-radius: 5px;
-  }
-  
-  .menu-btn {
+.navigation-menu {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.navigation-menu .logo {
+  font-size: 24px;
+  font-weight: bold;
+  color: white;
+  text-decoration: none;
+}
+
+.navlinks {
+  display: flex;
+  gap: 15px;
+}
+
+.navlinks a {
+  color: white;
+  text-decoration: none;
+  padding: 14px 16px;
+  transition: background 0.3s, border-bottom 0.3s;
+  border-bottom: 2px solid transparent;
+}
+
+.navlinks a:hover,
+.navlinks .active-link {
+  background: #555;
+  border-bottom: 2px solid white;
+  border-radius: 5px;
+}
+
+.icon {
+  display: none;
+}
+
+/* Responsive styles */
+@media screen and (max-width: 768px) {
+  .navlinks {
     display: none;
+    flex-direction: column;
+    background: #333;
+    width: 100%;
+    text-align: center;
   }
-  
-  @media (max-width: 768px) {
-    .main-nav .navlinks {
-      display: none;
-    }
-    
-    .menu-btn {
-      display: block;
-      cursor: pointer;
-    }
-    
-    .menu-btn i {
-      font-size: 24px;
-    }
-    
-    #isChecked:checked + .menu-btn + .navlinks {
-      display: flex;
-      flex-direction: column;
-      width: 100%;
-    }
-    
-    .navlinks a {
-      padding: 10px;
-      border-top: 1px solid #444;
-    }
+
+  .navlinks.responsive {
+    display: flex;
+    position: absolute;
+    top: 60px;
+    left: 0;
   }
-  
-  @media (max-width: 480px) {
-    header {
-      padding: 5px 10px;
-    }
-  
-    .menu-btn i {
-      font-size: 20px;
-    }
-  
-    .navlinks a {
-      padding: 8px;
-    }
+
+  .navlinks a {
+    padding: 10px 0;
   }
-  
+
+  .icon {
+    display: block;
+    cursor: pointer;
+    font-size: 24px;
+    color: white;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .header {
+    padding: 5px 10px;
+  }
+
+  .icon {
+    font-size: 20px;
+    
+  }
+
+  .navlinks a {
+    padding: 8px;
+  }
+}

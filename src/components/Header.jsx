@@ -1,46 +1,32 @@
-// import React from 'react';
-// import './Header.css';
-
-// const Header = () => {
-//   return (
-//     <header className='header'>
-//       <nav className="main-nav">
-        
-//         <a href="index.html" className="logo">Ashfaqul</a>
-//         <ul className="navlinks">
-//           <li><a href="index.html" className="active">Home</a></li>
-//           <li><a href="about.html">About Me</a></li>
-//           <li><a href="cv.html">CV/Resume</a></li>
-//           <li><a href="portfolio.html">Portfolio</a></li>
-//           <li><a href="contact.html">Contact</a></li>
-//         </ul>
-//       </nav>
-//     </header>
-//   );
-// };
-
-// export default Header;
-
-import React from 'react';
-import { NavLink } from 'react-router-dom';
+import React, { useState } from 'react';
+import { NavLink, useLocation } from 'react-router-dom';
 import './Header.css';
 
-const Header = () => {
-  return (
-    <header>
-      <nav className="main-nav">
-        
-        <NavLink to="/" className="logo">Ashfaqul</NavLink>
-        <ul className="navlinks">
-          <li><NavLink to="/" end className={({ isActive }) => isActive ? "active" : ""}>Home</NavLink></li>
-          <li><NavLink to="/about" className={({ isActive }) => isActive ? "active" : ""}>About Me</NavLink></li>
-          <li><NavLink to="/cv" className={({ isActive }) => isActive ? "active" : ""}>CV/Resume</NavLink></li>
-          <li><NavLink to="/portfolio" className={({ isActive }) => isActive ? "active" : ""}>Portfolio</NavLink></li>
-          <li><NavLink to="/contact" className={({ isActive }) => isActive ? "active" : ""}>Contact</NavLink></li>
-        </ul>
-      </nav>
-    </header>
-  );
-};
+function Header() {
+    const location = useLocation();
+    const [isDropdownOpen, setDropdownOpen] = useState(false);
+
+    // const isActive = (path) => location.pathname === path;
+
+    const toggleDropdown = () => setDropdownOpen(!isDropdownOpen);
+
+    return (
+        <header className="header">
+            <nav className="navigation-menu" id="myTopnav">
+                <NavLink to="/" className="logo">Ashfaqul</NavLink>
+                <div className={`navlinks ${isDropdownOpen ? 'responsive' : ''}`}>
+                    <NavLink to="/" className={({ isActive }) => (isActive ? 'active-link' : '')}>Home</NavLink>
+                    <NavLink to="/about" className={({ isActive }) => (isActive ? 'active-link' : '')}>About Me</NavLink>
+                    <NavLink to="/resume" className={({ isActive }) => (isActive ? 'active-link' : '')}>My Resume</NavLink>
+                    <NavLink to="/portfolio" className={({ isActive }) => (isActive ? 'active-link' : '')}>My Portfolio</NavLink>
+                    <NavLink to="/contact" className={({ isActive }) => (isActive ? 'active-link' : '')}>Contact Me</NavLink>
+                </div>
+                <a href="javascript:void(0);" className="icon" onClick={toggleDropdown}>
+                    <i className="fa fa-bars"></i>
+                </a>
+            </nav>
+        </header>
+    );
+}
 
 export default Header;

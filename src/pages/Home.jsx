@@ -1,5 +1,6 @@
 import React from 'react';
 import './Home.css';
+import { NavLink } from 'react-router-dom';
 import homeImage from '../assets/5625516.png';
 
 const Home = () => {
@@ -15,7 +16,7 @@ const Home = () => {
                     </p>
                     <div className="buttons">
                         <a href="portfolio.html">List of projects</a>
-                        <a href="contact.html">Get in touch</a>
+                        <NavLink to="/contact">Get in touch</NavLink>
                     </div>
                 </div>
                 <div className="main__image">

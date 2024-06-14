@@ -1,4 +1,5 @@
 import React from 'react';
+import { NavLink } from 'react-router-dom';
 import aboutImage from '../assets/2150793852.jpg';
 import './AboutMe.css';
 
@@ -14,7 +15,7 @@ function AboutMe(){
                         </p>
                         <div className="buttons">
                             <a href="/portfolio">List of projects</a>
-                            <a href="/contact">Get in touch</a>
+                            <NavLink to="/contact">Get in touch</NavLink>
                         </div>
                     </div>
                     <div className="main__image">

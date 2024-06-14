@@ -1,5 +1,6 @@
 import React from 'react';
 import './Home.css';
+import homeImage from '../assets/5625516.png';
 
 const Home = () => {
   return (
@@ -18,7 +19,7 @@ const Home = () => {
             </div>
           </div>
           <div className="main__image">
-            <img src="img/5625516.png" alt="Image by IconScout" className="main__img" />
+            <img src={homeImage} alt="Courtasy: IconScout" className="main__img" />
           </div>
         </div>
       </div>

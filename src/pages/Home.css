@@ -9,7 +9,7 @@
 .main__container {
   flex: 60%;
   flex-direction: column;
-  padding: 50px;
+  /* padding: 50px; */
   box-sizing: border-box;
 }
 

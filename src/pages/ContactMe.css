@@ -1,0 +1,128 @@
+/* Contact page */
+.container {
+    padding: 20px;
+    background-color: #fff;
+  }
+  
+  .content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 20px 0;
+  }
+  
+  .content .left-side {
+    width: 35%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .left-side .details {
+    margin: 14px;
+    text-align: center;
+  }
+  
+  .left-side .details i {
+    font-size: 30px;
+    color: #3e2093;
+    margin-bottom: 10px;
+  }
+  
+  .details .topic {
+    font-size: 18px;
+    font-weight: 500;
+  }
+  
+  .details .text {
+    font-size: 14px;
+    color: #afafb6;
+  }
+  
+  .content .right-side {
+    width: 63%;
+    margin-left: 75px;
+  }
+  
+  .right-side .topic-text {
+    font-size: 23px;
+    font-weight: 600;
+    color: #3e2093;
+  }
+  
+  .right-side .input-box {
+    height: 50px;
+    width: 100%;
+    margin: 12px 0;
+  }
+  
+  input,
+  textarea {
+    height: 100%;
+    width: 95%;
+    border: none;
+    outline: none;
+    font-size: 16px;
+    background: #f0f1f8;
+    border-radius: 6px;
+    /* padding: 0 15px; */
+  }
+  
+  .message-box {
+    min-height: 110px;
+  }
+  
+  .button {
+    display: inline-block;
+    margin-top: 12px;
+  }
+  
+  input[type="button"] {
+    color: #fff;
+    font-size: 18px;
+    outline: none;
+    border: none;
+    padding: 8px 16px;
+    border-radius: 6px;
+    background: #28a745; /* Green color for the send button */
+    cursor: pointer;
+    transition: all 0.3s ease;
+  }
+  
+  .button input[type="button"]:hover {
+    background: #218838;
+  }
+  
+  /* Responsive styles */
+  @media (max-width: 768px) {
+    .content {
+      flex-direction: column-reverse;
+    }
+    .content .left-side {
+      width: 100%;
+      flex-direction: column-reverse;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+    .content .right-side {
+      width: 100%;
+      margin-left: 0;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .right-side .topic-text {
+      font-size: 20px;
+    }
+    .details .topic {
+      font-size: 16px;
+    }
+    .details .text {
+      font-size: 12px;
+    }
+    .left-side .details i {
+      font-size: 25px;
+    }
+  }
+  

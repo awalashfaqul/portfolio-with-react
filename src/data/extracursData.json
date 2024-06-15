@@ -1,0 +1,19 @@
+{
+    "interests":[
+       "Music",
+       "Sports",
+       "Travel",
+       "Reading",
+       "Swimming"
+    ],
+    "languages":[
+       {
+          "language":"English",
+          "proficiency":"Native/Bilingual"
+       },
+       {
+          "language":"Swedish",
+          "proficiency":"Professionally fluent"
+       }
+    ]
+ }

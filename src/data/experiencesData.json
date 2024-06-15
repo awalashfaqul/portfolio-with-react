@@ -1,0 +1,30 @@
+[
+    {
+       "startDate":"Oct'23",
+       "endDate":"Feb'24",
+       "position":"Production Employee",
+       "company":"DAGAB Inköp & Logistik, AxFood AB",
+       "location":"Bålsta"
+    },
+    {
+       "startDate":"Oct'20",
+       "endDate":"Jun'21",
+       "position":"Program Assistant",
+       "company":"INDEK, KTH Royal Institute of Technology",
+       "location":"Stockholm"
+    },
+    {
+       "startDate":"Feb'10",
+       "endDate":"Aug'10",
+       "position":"Coordinator & Instructor",
+       "company":"CISCO Networking Academy, University Of Development Alternative (UODA)",
+       "location":"Dhaka, Bangladesh"
+    },
+    {
+       "startDate":"Feb'06",
+       "endDate":"Aug'10",
+       "position":"Lecturer",
+       "company":"Faculty of Engineering, University Of Development Alternative (UODA)",
+       "location":"Dhaka, Bangladesh"
+    }
+ ]

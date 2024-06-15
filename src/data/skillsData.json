@@ -1,0 +1,25 @@
+{
+    "keySkills":[
+       "Backend development",
+       "Frontend development",
+       "Teamwork",
+       "Data Analysis",
+       "Problem Solving",
+       "Database Management",
+       "Communications"
+    ],
+    "goodUnderstanding":[
+       "Project Coordination",
+       "Project Management",
+       "Innovation Management",
+       "Git version control",
+       "CI/CD"
+    ],
+    "competencies":[
+       "Programming in C#",
+       "HTML, CSS, Javascript",
+       ".NET framework/core",
+       "MS SQL server",
+       "Office 365"
+    ]
+ }

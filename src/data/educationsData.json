@@ -1,0 +1,30 @@
+[
+    {
+       "startDate":"Sep'23",
+       "endDate":"Jun'25",
+       "institution":"Chas Academy",
+       "degree":"Fullstack Developer .NET",
+       "location":"Stockholm"
+    },
+    {
+       "startDate":"Sep'20",
+       "endDate":"Jun'21",
+       "institution":"KTH Royal Institute of Technology",
+       "degree":"Master Program, Entrepreneurship and Innovation Management",
+       "location":"Stockholm"
+    },
+    {
+       "startDate":"Jan'06",
+       "endDate":"May'08",
+       "institution":"Independent University, Bangladesh (IUB)",
+       "degree":"M.Sc. in Telecommunications Engineering",
+       "location":"Dhaka, Bangladesh"
+    },
+    {
+       "startDate":"Aug'99",
+       "endDate":"May'05",
+       "institution":"Ahsanullah University of Science & Technology (AUST)",
+       "degree":"B.Sc. in Computer Science & Engineering",
+       "location":"Dhaka, Bangladesh"
+    }
+ ]

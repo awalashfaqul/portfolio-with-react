@@ -11,7 +11,7 @@ import ContactMe from './pages/ContactMe';
 
 import './App.css';
 
-const App = () => {
+function App() {
   return (
     <Router>
       <Header />

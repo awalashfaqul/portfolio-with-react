@@ -14,7 +14,7 @@ function AboutMe(){
                             A proactive and results-oriented professional with a strong background in problem-solving and interpersonal skills, adept at fostering collaboration and leading teams toward achieving objectives. Currently studying Fullstack .NET @ Chas Academy, coupled with a diverse academic background encompassing Innovation Management, Telecommunications Engineering, and Computer Science & Engineering. Committed to continuous learning and making meaningful contributions in dynamic environments. Fluent in Swedish and English.
                         </p>
                         <div className="buttons">
-                            <a href="/portfolio">List of projects</a>
+                        <NavLink to="/portfolio">List of Projects</NavLink>
                             <NavLink to="/contact">Get in touch</NavLink>
                         </div>
                     </div>

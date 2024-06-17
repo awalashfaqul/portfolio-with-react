@@ -1,5 +1,5 @@
 /* Base styles for header */
-.header {
+/* .header {
   background-color: #141b25;
   color: white;
   padding: 10px 20px;
@@ -35,26 +35,41 @@
 
 .navlinks a:hover,
 .navlinks .active-link {
-  /* background: #555; */
   border-bottom: 2px solid white;
-  /* border-radius: 5px; */
 }
 
 .icon {
   display: none;
 }
 
+.dropdown-menu {
+  display: none;
+  position: absolute;
+  background-color: #141b25;
+  padding: 10px;
+  top: 50px;
+  left: 0;
+  width: 100px;
+}
+
+.dropdown:hover .dropdown-menu {
+  display: block;
+}
+
+.dropdown-menu li {
+  padding: 10px 0;
+  cursor: pointer;
+} */
+
 /* Responsive styles */
-@media screen and (max-width: 768px) {
+/* @media screen and (max-width: 768px) {
   .navlinks {
-    display:none;
+    display: none;
     flex-direction: column;
     background: #141b25ee;
     width: 100%;
     height: 100vh;
-    text-align:center;
-    
-    
+    text-align: center;
   }
 
   .navlinks.responsive {
@@ -62,7 +77,6 @@
     position: absolute;
     top: 60px;
     left: 0;
-    float:right;
     margin: 0;
     padding: 0;
   }
@@ -77,6 +91,17 @@
     font-size: 24px;
     color: white;
   }
+
+  .dropdown-menu {
+    position: static;
+    background-color: transparent;
+    padding: 0;
+  }
+
+  .dropdown-menu li {
+    background-color: #141b25;
+    padding: 10px;
+  }
 }
 
 @media screen and (max-width: 480px) {
@@ -86,7 +111,138 @@
 
   .icon {
     font-size: 20px;
-    
+  }
+
+  .navlinks a {
+    padding: 8px;
+  }
+} */
+
+/* Base styles for header */
+.header {
+  background-color: #141b25;
+  color: white;
+  padding: 10px 20px;
+  position: relative;
+  z-index: 1000;
+}
+
+.navigation-menu {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.navigation-menu .logo {
+  font-size: 24px;
+  font-weight: bold;
+  color: white;
+  text-decoration: none;
+}
+
+.navlinks {
+  display: flex;
+  gap: 15px;
+  position: relative;
+}
+
+.navlinks a {
+  color: white;
+  text-decoration: none;
+  padding: 14px 16px;
+  transition: background 0.3s, border-bottom 0.3s;
+  border-bottom: 2px solid transparent;
+}
+
+.navlinks a:hover,
+.navlinks .active-link {
+  border-bottom: 2px solid white;
+}
+
+.icon {
+  display: none;
+}
+
+.dropdown {
+  position: relative;
+}
+
+.dropdown-menu {
+  display: none;
+  position:absolute;
+  background-color: #141b25;
+  padding: 10px;
+  top: 40px;
+  left: 0;
+  width: 200px;
+  border-radius: 5px;
+}
+
+.dropdown:hover .dropdown-menu {
+  display: block;
+}
+
+.dropdown-menu li {
+  padding: 10px 20px;
+  cursor: pointer;
+  color: white;
+  transition: background 0.3s;
+}
+
+.dropdown-menu li:hover {
+  background-color: #0056b3;
+}
+
+/* Responsive styles */
+@media screen and (max-width: 768px) {
+  .navlinks {
+    display: none;
+    flex-direction: column;
+    background: #141b25ee;
+    width: 100%;
+    height: 100vh;
+    text-align: center;
+  }
+
+  .navlinks.responsive {
+    display: flex;
+    position: absolute;
+    top: 60px;
+    left: 0;
+    margin: 0;
+    padding: 0;
+  }
+
+  .navlinks a {
+    padding: 10px 0;
+  }
+
+  .icon {
+    display: block;
+    cursor: pointer;
+    font-size: 24px;
+    color: white;
+  }
+
+  .dropdown-menu {
+    position: static;
+    background-color: transparent;
+    padding: 0;
+  }
+
+  .dropdown-menu li {
+    background-color: #141b25;
+    padding: 10px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .header {
+    padding: 5px 10px;
+  }
+
+  .icon {
+    font-size: 20px;
   }
 
   .navlinks a {

@@ -1,36 +1,3 @@
-// import React, { useState } from 'react';
-// import { NavLink, useLocation } from 'react-router-dom';
-// import './Header.css';
-
-// function Header() {
-//     //const location = useLocation();
-//     const [isDropdownOpen, setDropdownOpen] = useState(false);
-
-//     // const isActive = (path) => location.pathname === path;
-
-//     const toggleDropdown = () => setDropdownOpen(!isDropdownOpen);
-
-//     return (
-//         <header className="header">
-//             <nav className="navigation-menu" id="myTopnav">
-//                 <NavLink to="/" className="logo">Ashfaqul</NavLink>
-//                 <div className={`navlinks ${isDropdownOpen ? 'responsive' : ''}`}>
-//                     <NavLink to="/" className={({ isActive }) => (isActive ? 'active-link' : '')}>Home</NavLink>
-//                     <NavLink to="/about" className={({ isActive }) => (isActive ? 'active-link' : '')}>About Me</NavLink>
-//                     <NavLink to="/resume" className={({ isActive }) => (isActive ? 'active-link' : '')}>My Resume</NavLink>
-//                     <NavLink to="/portfolio" className={({ isActive }) => (isActive ? 'active-link' : '')}>My Portfolio</NavLink>
-//                     <NavLink to="/contact" className={({ isActive }) => (isActive ? 'active-link' : '')}>Contact Me</NavLink>
-//                 </div>
-//                 <a href="javascript:void(0);" className="icon" onMouseEnter={toggleDropdown} onMouseLeave={toggleDropdown}>
-//                     <i className="fa fa-bars"></i>
-//                 </a>
-//             </nav>
-//         </header>
-//     );
-// }
-
-// export default Header;
-
 import React, { useState } from 'react';
 import { NavLink, useLocation } from 'react-router-dom';
 import './Header.css';
@@ -42,6 +9,16 @@ function Header() {
     const [isDropdownOpen, setDropdownOpen] = useState(false);
 
     const toggleDropdown = () => setDropdownOpen(!isDropdownOpen);
+
+    const [isResumeActive, setIsResumeActive] = useState(false);
+
+  const handleResumeClick = () => {
+    setIsResumeActive(true);
+  };
+
+  const handleOtherClick = () => {
+    setIsResumeActive(false);
+  };
 
     const handleSaveAsPDF = async () => {
         // Exclude the navigation bar from the screenshot
@@ -88,11 +65,24 @@ function Header() {
             <nav className="navigation-menu" id="myTopnav">
                 <NavLink to="/" className="logo">Ashfaqul</NavLink>
                 <div className={`navlinks ${isDropdownOpen ? 'responsive' : ''}`}>
-                    <NavLink to="/" className={({ isActive }) => (isActive ? 'active-link' : '')}>Home</NavLink>
-                    <NavLink to="/about" className={({ isActive }) => (isActive ? 'active-link' : '')}>About Me</NavLink>
-                    <span className="dropdown" onMouseEnter={toggleDropdown} onMouseLeave={toggleDropdown}>
+                <NavLink
+            exact
+            to="/"
+            className={({ isActive }) => (isActive ? 'active-link' : '')}
+            onClick={handleOtherClick}
+          >
+            Home
+          </NavLink>
+          <NavLink
+            to="/about"
+            className={({ isActive }) => (isActive ? 'active-link' : '')}
+            onClick={handleOtherClick}
+          >
+            About Me
+          </NavLink>
+                    {/* <span className="dropdown" onMouseEnter={toggleDropdown} onMouseLeave={toggleDropdown}>
                         <NavLink to="/resume" className={({ isActive }) => (isActive ? 'active-link' : undefined)}>
-                            My Resume
+                            CV/Resume
                         </NavLink>
                         {isDropdownOpen && (
                             <ul className="dropdown-menu">
@@ -100,9 +90,45 @@ function Header() {
                                 <li onClick={handlePrint}>Print</li>
                             </ul>
                         )}
-                    </span>
-                    <NavLink to="/portfolio" className={({ isActive }) => (isActive ? 'active-link' : '')}>My Portfolio</NavLink>
-                    <NavLink to="/contact" className={({ isActive }) => (isActive ? 'active-link' : '')}>Contact Me</NavLink>
+                    </span> */}
+
+                    {/* <div className="dropdown">
+                        <span className="dropbtn">Resume<i className="fa fa-caret-down"></i></span>
+                        <div className="dropdown-content">
+                            <NavLink to="/resume" className={({ isActive }) => (isActive ? 'active-link' : '')}>My Resume</NavLink>
+                            <button id="generate-pdf" onClick={handleSaveAsPDF}>Save Resume</button>
+                            </div>
+                    </div> */}
+
+                    <div className="dropdown">
+                        <span className={`dropbtn ${isResumeActive ? 'active-link' : ''}`} onClick={handleResumeClick}>Resume <i className="fa fa-caret-down"></i></span>
+                        <div className="dropdown-content">
+                            <NavLink to="/resume" className={({ isActive }) => {
+                                                                                    if (isActive) 
+                                                                                    {
+                                                                                        setIsResumeActive(true);
+                                                                                    }
+                                                                                    return isActive ? 'active-link' : '';
+                                                                                }
+                                                                }>
+                                My Resume
+                            </NavLink>
+                            <button id="generate-pdf" onClick={handleSaveAsPDF}>Save Resume</button>
+                        </div>
+                    </div>
+
+                    <NavLink
+                            to="/portfolio"
+                            className={({ isActive }) => (isActive ? 'active-link' : '')}
+                            onClick={handleOtherClick}>
+                        My Portfolio
+                    </NavLink>
+                    <NavLink
+                        to="/contact"
+                        className={({ isActive }) => (isActive ? 'active-link' : '')}
+                        onClick={handleOtherClick}>
+                            Contact Me
+                    </NavLink>
                 </div>
                 <a href="javascript:void(0);" className="icon" onClick={toggleDropdown}>
                     <i className="fa fa-bars"></i>

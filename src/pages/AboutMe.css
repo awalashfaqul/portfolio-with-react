@@ -27,7 +27,7 @@
   .main__text h2 {
     font-size: 2em;
     margin-bottom: 20px;
-    color: #3e2093;
+    color: #194786;
   }
   
   .main__text p {
@@ -39,6 +39,7 @@
   .buttons {
     display: flex;
     gap: 15px;
+    margin-top: 50px;
   }
   
   .buttons a {
@@ -59,11 +60,12 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    width: 100%;
   }
   
   .main__img {
-    max-width: 100%;
-    height: auto;
+    width: 100%;
+    /* height: auto; */
     border-radius: 10px;
   }
   
@@ -93,6 +95,9 @@
   
     .buttons a {
       padding: 8px 16px;
+      align-items: center;
     }
+
+    
   }
   

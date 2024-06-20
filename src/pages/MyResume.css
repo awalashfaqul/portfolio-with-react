@@ -3,12 +3,21 @@
     margin: 20px;
   }
   
-  i {
+  .fa i {
     margin-right: 15px;
     margin-left: 10px;
     font-size: 20px;
-    color: #3e2093;
+    color: #ffffff;
     margin-bottom: 10px;
+    margin-top: 10px;
+  }
+
+  .about i{
+    
+    /* color: #ffffff; */
+    margin-right: 15px;
+    margin-top: 10px;
+    color: #194786;
   }
   
   hr {
@@ -24,12 +33,12 @@
   
   .container {
     display: flex;
-    flex-wrap: wrap;
+    flex-wrap: nowrap;
   }
   
   .left-col {
     background-color: whitesmoke;
-    width: 100%;
+    /* width: 100%; */
     padding: 20px;
     border-radius: 15px;
     margin-bottom: 20px;
@@ -74,7 +83,7 @@
   }
   
   .skills h3 {
-    font-size: 1.5rem;
+    /* font-size: 1.5rem; */
     margin-top: 1.5rem;
   }
   
@@ -83,11 +92,20 @@
     padding-left: 15px;
   }
   
+  .skills i{
+    
+    /* color: #ffffff; */
+    margin-right: 15px;
+    margin-top: 10px;
+    color: #194786;
+  }
+
   .right-col {
     background-color: whitesmoke;
     width: 100%;
     padding: 20px;
     border-radius: 15px;
+    margin-left: 20px;
   }
   
   .right-col h1 {
@@ -109,7 +127,14 @@
   .cv-content .date {
     color: #1409e5;
   }
-  
+ 
+  .cv-content i{
+    
+    /* color: #ffffff; */
+    margin-right: 15px;
+    margin-top: 10px;
+    color: #194786;
+  }
   .submenu {
     margin-top: 20px;
     text-align: center;
@@ -171,7 +196,17 @@
     }
   
     .skills h3 {
-      font-size: 1.2rem;
+      font-size: 1.1rem;
     }
+
+    .container {
+      flex-direction: column;
+      padding: 10px;
+      
+  }
+
+  .right-col{
+    margin-left: 0px;
+  }
   }
   

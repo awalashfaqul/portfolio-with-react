@@ -2,6 +2,12 @@
 .container {
     padding: 20px;
     background-color: #fff;
+    display: flex;
+    justify-content: space-between;
+    /* align-items: center; */
+    max-width: 1200px;
+    margin: 0 auto;
+    /* padding-top: 100px; */
   }
   
   .content {
@@ -26,7 +32,7 @@
   
   .left-side .details i {
     font-size: 30px;
-    color: #3e2093;
+    color: #194786;
     margin-bottom: 10px;
   }
   
@@ -48,7 +54,7 @@
   .right-side .topic-text {
     font-size: 23px;
     font-weight: 600;
-    color: #3e2093;
+    color: #194786;
   }
   
   .right-side .input-box {
@@ -85,7 +91,7 @@
     border: none;
     padding: 8px 16px;
     border-radius: 6px;
-    background: #28a745; /* Green color for the send button */
+    background: #194786; /* Green color for the send button */
     cursor: pointer;
     transition: all 0.3s ease;
   }

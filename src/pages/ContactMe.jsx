@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import './ContactMe.css';
-import ContactModal from '../components/ContactModal';  // Adjust the import path as necessary
+import ContactModal from '../components/ContactModal';  // Adjusting the import path as necessary
 
 function ContactMe(){
   const [modalVisible, setModalVisible] = useState(false);

@@ -2,14 +2,15 @@
 .main__section {
   display: flex;
   flex-wrap: wrap;
-  
+  justify-content: center;
   background-color: #ffffff;
 }
 
 .main__container {
-  flex: 60%;
+  width: 100%;
+  max-width: 480px; /* Ensuring the container does not exceed 480px */
   flex-direction: column;
-  /* padding: 50px; */
+  padding: 20px;
   box-sizing: border-box;
 }
 
@@ -20,19 +21,21 @@
   -webkit-text-stroke-width: 2px;
   -webkit-text-stroke-color: #090909;
   margin-bottom: 32px;
+  /* flex-wrap: wrap; */
 }
 
 .main__content {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  align-items: flex-start;
+  align-items: center;
   width: 100%;
 }
 
 .main__text {
-  flex: 3;
-  padding: 20px;
+  /* flex: 3; */
+  width: 100%;
+  padding: 10px;
 }
 
 .main__text h1 {
@@ -41,7 +44,7 @@
 }
 
 .main__text h2 {
-  font-size: 2em;
+  font-size: 1.5em;
   margin-bottom: 20px;
 }
 
@@ -54,9 +57,14 @@
 .buttons {
   display: flex;
   gap: 15px;
+  flex-direction: row;
+  /* width: 100%; */
 }
 
 .buttons a {
+  /* display: block; */
+  text-align: center;
+  margin-bottom: 10px;
   background-color: #04AA6D;
   color: white;
   padding: 10px 20px;
@@ -70,10 +78,12 @@
 }
 
 .main__image {
+  width: 100%;
   flex: 2;
   display: flex;
   justify-content: center;
   align-items: center;
+  margin-top: 20px;
 }
 
 .main__img {
@@ -83,10 +93,11 @@
 }
 
 /* Responsive styles */
-@media (max-width: 768px) {
+@media (max-width: 481px) and (max-width: 768px) {
   .main__container {
-    flex-direction: column;
+    /* flex-direction: column; */
     align-items: center;
+    width: 100%;
   }
 
   .main__content {
@@ -101,19 +112,48 @@
 }
 
 @media (max-width: 480px) {
+  .main__container {
+    width: 100%;
+    padding: 10px; /* Adjust padding for small screens */
+  }
+
+  .main__container h1 {
+    font-size: 5em;
+    margin-bottom: 20px;
+    word-wrap: break-word;
+  }
+
   .main__text h1 {
-    font-size: 2em;
+    font-size: 1.8em;
   }
 
   .main__text h2 {
-    font-size: 1.5em;
+    font-size: 1.2em;
   }
 
   .main__text p {
-    font-size: 1em;
+    font-size: 0.9em;
+  }
+  .buttons {
+    display: flex;
+    gap: 15px;
+    flex-direction: column;
+    width: 100%;
+  }
+  
+  .buttons a {
+    display: block;
+    text-align: center;
+    margin-bottom: 10px;
+    background-color: #04AA6D;
+    color: white;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
   }
 
-  .buttons a {
+  /* .buttons a {
     padding: 8px 16px;
-  }
+  } */
 }
